@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 0 0% 99%;
+  --foreground: 222 18% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 18% 12%;
+  --primary: 146 48% 32%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 92%;
+  --secondary-foreground: 222 18% 12%;
+  --muted: 215 18% 94%;
+  --muted-foreground: 218 11% 42%;
+  --accent: 38 82% 54%;
+  --accent-foreground: 32 40% 14%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 15% 86%;
+  --input: 214 15% 86%;
+  --ring: 146 48% 32%;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 220 13% 9%;
+  --foreground: 210 25% 95%;
+  --card: 222 14% 13%;
+  --card-foreground: 210 25% 95%;
+  --primary: 145 54% 46%;
+  --primary-foreground: 150 30% 8%;
+  --secondary: 217 13% 19%;
+  --secondary-foreground: 210 25% 95%;
+  --muted: 220 12% 18%;
+  --muted-foreground: 217 11% 68%;
+  --accent: 39 87% 56%;
+  --accent-foreground: 32 40% 12%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 219 13% 25%;
+  --input: 219 13% 25%;
+  --ring: 145 54% 46%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted) / 0.4) 45%, hsl(var(--background))),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.24);
+}
+
+.recharts-wrapper text {
+  fill: hsl(var(--muted-foreground));
+}
+
+.printable-dashboard {
+  color: hsl(var(--foreground));
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+

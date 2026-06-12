@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+coverage/
+*.log
+apps/web/.vite/
+apps/web/dist/
+apps/api/dist/
+
+Dockerfile
+docker-compose.yml
+eslint.config.js
+README.md
