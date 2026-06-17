@@ -1,0 +1,13 @@
+services:
+  github-insight-analyzer:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      CORS_ORIGIN: "*"
+      CACHE_TTL_SECONDS: 300
+      MAX_GITHUB_PAGES: 50
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+
