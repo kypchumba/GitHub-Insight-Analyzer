@@ -9,7 +9,5 @@ apps/web/.vite/
 apps/web/dist/
 apps/api/dist/
 
-Dockerfile
-docker-compose.yml
-eslint.config.js
-README.md
+
+
